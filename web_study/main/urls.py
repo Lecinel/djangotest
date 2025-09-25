@@ -13,6 +13,7 @@ urlpatterns = [
     path('blog', views.blog, name="blog"),
     path('blog/<int:pk>/',views.posting, name="posting"),
     path('blog/new_post/', views.new_post),
+    path('blog/<int:pk>/remove/', views.remove_post),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
